@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+  
+<style>
+  /* styles.css */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Centered Headers */
+center {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2em;
+    font-weight: bold;
+    color: #444;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* UL Styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 40px;
+}
+
+ul[type="circle"] li::before {
+    content: '\2022';
+    color: #f39c12;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+ul[type="CENTER"] li::before {
+    content: '\2022';
+    color: #e74c3c;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* LI Styling */
+li {
+    margin: 10px 0;
+    padding: 15px 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+li:hover {
+    background: #f7f7f7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Header Styling */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling */
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+/* Footer Styling */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Content Wrapper */
+.container {
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    center {
+        font-size: 1.5em;
+    }
+
+    li {
+        font-size: 0.9em;
+        padding: 8px 10px;
+    }
+}
+
+  </style>
+  
+<body>
+<header>
+    <h1>Menu</h1>
+</header>
+<div class="container">
+    <center>DRINKS</center>
+    <ul type="circle">
+        <li>TEA</li>
+        <li>HOT COFFEE</li>
+        <li>BLACK TEA</li>
+        <li>MASALA TEA</li>
+        <li>LIME SODA</li>
+        <li>COLD DRINK CAN</li>
+    </ul>
+    <center>SHAKES</center>
+    <ul type="circle">
+        <li>VANILLA SHAKE</li>
+        <li>STRAWBERRY SHAKE</li>
+        <li>BUTTER SCOTCH SHAKE</li>
+        <li>CHOCOLATE SHAKE</li>
+        <li>COLD COFFEE</li>
+        <li>COLD COFFEE WITH ICE CREAM</li>
+    </ul>
+    <center>STARTERS</center>
+    <ul type="circle">
+        <li>VEG CUTLET</li>
+        <li>CHEESE CUTLET</li>
+        <li>VEG PAKODA</li>
+        <li>PANEER PAKODA</li>
+        <li>CHILLY PANEER</li>
+        <li>SPRING ROLL</li>
+        <li>MANCHURIAN {DRY&GRAVY}</li>
+        <li>VEG 65</li>
+        <li>HONEY CHILLY POTATO</li>
+        <li>CHILLY POTATO</li>
+        <li>CHILLY MUSHROOM</li>
+        <li>PANEER TIKKA</li>
+        <li>MUSHROOM TIKKA</li>
+        <li>ANGURI TIKKA</li>
+        <li>HARA BHARA KABAB</li>
+        <li>CHANA KABAB</li>
+        <li>PANEER BLACK PEPPER TIKKA</li>
+        <li>PANEER MALAI TIKKA</li>
+        <li>BAR-BE-QU ALOO</li>
+        <li>VEG SHEEK KABAB</li>
+        <li>DAHI KABAB</li>
+    </ul>
+    <center>SPECIAL</center>
+    <ul type="circle">
+        <li>TANDOORI PLATTER</li>
+        <li>SPECIAL THALLI (12:00AM TO 5:00PM)</li>
+    </ul>
+    <center>SANDWICH</center>
+    <ul type="circle">
+        <li>BUTTER TOAST</li>
+        <li>VEG SANDWICH</li>
+        <li>BREAD BUTTER</li>
+        <li>GARLIC BREAD</li>
+        <li>CHEESE SANDWICH</li>
+        <li>GARLIC SANDWICH</li>
+        <li>CHEESE GARLIC SANDWICH</li>
+    </ul>
+    <center>ITALIAN CUISINE</center>
+    <ul type="circle">
+        <li>CHEESE PIZZA</li>
+        <li>CHEESE MUSHROOM PIZZA</li>
+        <li>CHEESE CAPSICUM PINEAPPLE PIZZA</li>
+        <li>ONION CAPSICUM PIZZA</li>
+        <li>CHEESE CORN PIZZA</li>
+        <li>KASHMIRI PIZZA</li>
+        <li>CHEESE PANEER PIZZA</li>
+        <li>EXTRA CHEESE</li>
+    </ul>
+    <center>CONTINENTAL</center>
+    <ul type="circle">
+        <li>RED SAUCE PASTA</li>
+        <li>WHITE SAUCE PASTA</li>
+        <li>RED SAUCE PASTA WITH GARLIC BREAD</li>
+        <li>WHITE SAUCE PASTA WITH GARLIC BREAD</li>
+    </ul>
+    <center>CHINESE CUISINE</center>
+    <ul type="circle">
+        <li>VEG CHOWMEIN</li>
+        <li>VEG FRIED RICE</li>
+        <li>VEG CHOW RICE</li>
+        <li>GARLIC CHOWMEIN</li>
+        <li>SCHEZWAN RICE</li>
+        <li>HAKKA NOODLES</li>
+        <li>PANEER FRIED RICE</li>
+        <li>MUSHROOM NOODLES</li>
+        <li>PANEER BABY CORN RICE</li>
+        <li>AMERICAN CHOP SUEY</li>
+        <li>MUSHROOM NOODLES</li>
+        <li>VEG BABY CORN NOODLES</li>
+        <li>VEG PANEER NOODLES</li>
+        <li>CHILLY GARLIC NOODLES</li>
+    </ul>
+    <center>PANEER SPECIAL</center>
+    <ul type="circle">
+        <li>SHAHI PANEER</li>
+        <li>PANEER MAHARAJA</li>
+        <li>PALAK PANEER</li>
+        <li>PANEER BUTTER MASALA</li>
+        <li>PANEER MUSHROOM BABY CORN</li>
+        <li>KADAI PANEER</li>
+        <li>KHOYA PANEER</li>
+        <li>PANEER KALI MIRCH</li>
+        <li>PANEER DO PYAZA</li>
+        <li>PANEER NAZAKAT</li>
+        <li>HANDI PANEER</li>
+    </ul>
+    <center>INDIAN BREAD</center>
+    <ul type="center">
+        <li>PLAIN ROTI</li>
+        <li>BUTTER ROTI</li>
+        <li>PLAIN NAAN</li>
+        <li>BUTTER NAAN</li>
+        <li>MISSI ROTI</li>
+        <li>LACCHA PARATHA</li>
+        <li>PUDINA PARATHA</li>
+        <li>STUFF PARATHA</li>
+        <li>MIRCHI PARATHA</li>
+        <li>KHASTA ROTI</li>
+        <li>KASHMIRI NAAN</li>
+        <li>GARLIC NAAN</li>
+        <li>PANEER PARATHA</li>
+        <li>ALOO PARATHA</li>
+        <li>ONION PARATHA</li>
+    </ul>
+</div>
+<footer>
+    <p>&copy; 2024 SIDDHANT RESTRAUNT</p>
+</footer>
+</body>
+</html>
