@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siddhant Restaurant</title>
+<meta property="og:title" content="Siddhant Restaurant">
+<meta property="og:description" content="Siddhant Restaurant - Enjoy a wide variety of delicious dishes and refreshing drinks.">
+<meta property="og:image" content="https://siddhant-restaurant.w3spaces.com/final.png">
+<meta property="og:url" content="https://siddhant-restaurant.w3spaces.com/">
+<meta property="og:type" content="website">
+<link rel="shortcut icon" href="restro.png" type="image/x-icon">
+
+<style>
+  /* Basic Reset */
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  /* Body Styling */
+  body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+      padding: 20px;
+  }
+
+  /* Centered Headers */
+  .section-header {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 2em;
+      font-weight: bold;
+      color: #444;
+      background-color: #f8f9fa;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* UL Styling */
+  ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0 0 40px;
+  }
+
+  ul[type="circle"] li::before {
+      content: '\2022';
+      color: #f39c12;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+  }
+
+  ul[type="center"] li::before {
+      content: '\2022';
+      color: #e74c3c;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+  }
+
+  /* LI Styling */
+  li {
+      margin: 10px 0;
+      padding: 15px 20px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  li:hover {
+      background: #f7f7f7;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Header Styling */
+  header {
+      background: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Title Styling */
+  header h1 {
+      margin: 0;
+      font-size: 2em;
+  }
+
+  /* Footer Styling */
+  footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Content Wrapper */
+  .container {
+      max-width: 800px;
+      margin: auto;
+      overflow: hidden;
+      padding: 0 20px;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+      body {
+          padding: 10px;
+      }
+
+      .section-header {
+          font-size: 1.5em;
+      }
+
+      li {
+          font-size: 0.9em;
+          padding: 8px 10px;
+      }
+  }
+</style>
+</head>
+<body>
+<header>
+    <h1>Menu</h1>
+</header>
+<div class="container">
+    <section>
+        <div class="section-header">Drinks</div>
+        <ul type="circle">
+            <li>Tea</li>
+            <li>Hot Coffee</li>
+            <li>Black Tea</li>
+            <li>Masala Tea</li>
+            <li>Lime Soda</li>
+            <li>Cold Drink Can</li>
+        </ul>
+    </section>
+    <section>
+        <div class="section-header">Shakes</div>
+        <ul type="circle">
+            <li>Vanilla Shake</li>
+            <li>Strawberry Shake</li>
+            <li>Butterscotch Shake</li>
+            <li>Chocolate Shake</li>
+            <li>Cold Coffee</li>
+            <li>Cold Coffee with Ice Cream</li>
+        </ul>
+    </section>
+    <section>
+        <div class="section-header">Starters</div>
+        <ul type="circle">
+            <li>Veg Cutlet</li>
+            <li>Cheese Cutlet</li>
+            <li>Veg Pakoda</li>
+            <li>Paneer Pakoda</li>
+            <li>Chilly Paneer</li>
+            <li>Spring Roll</li>
+            <li>Manchurian (Dry & Gravy)</li>
+            <li>Veg 65</li>
+            <li>Honey Chilly Potato</li>
+            <li>Chilly Potato</li>
+            <li>Chilly Mushroom</li>
+            <li>Paneer Tikka</li>
+            <li>Mushroom Tikka</li>
+            <li>Anguri Tikka</li>
+            <li>Hara Bhara Kabab</li>
+            <li>Chana Kabab</li>
+            <li>Paneer Black Pepper Tikka</li>
+            <li>Paneer Malai Tikka</li>
+            <li>Bar-Be-Que Aloo</li>
+            <li>Veg Sheek Kabab</li>
+            <li>Dahi Kabab</li>
+        </ul>
+    </section>
+    <section>
+        <div class="section-header">Special</div>
+        <ul type="circle">
+            <li>Tandoori Platter</li>
+            <li>Special Thali (12:00 PM to 5:00 PM)</li>
+        </ul>
+    </section>
+    <section>
+        <div class="section-header">Sandwich</div>
+        <ul type="circle">
+            <li>Butter Toast</li>
+            <li>Veg Sandwich</li>
+            <li>Bread Butter</li>
+            <li>Garlic Bread</li>
+            <li>Cheese Sandwich</li>
+            <li>Garlic Sandwich</li>
+            <li>Cheese Garlic Sandwich</li>
+        </ul>
+    </section>
+    <section>
+        <div class="section-header">Italian Cuisine</div>
+        <ul type="circle">
+            <li>Cheese Pizza</li>
+            <li>Cheese Mushroom Pizza</li>
+            <li>Cheese Capsicum Pineapple Pizza</li>
+            <li>Onion Capsicum Pizza</li>
+            <li>Cheese Corn Pizza</li>
+            <li>Kashmiri Pizza</li>
+            <li>Cheese Paneer Pizza</li>
+            <li>Extra Cheese</li>
+        </ul>
+    </section>
+    <section>
+        <div class="section-header">Continental</div>
+        <ul type="circle">
+            <li>Red Sauce Pasta</li>
+            <li>White Sauce Pasta</li>
+            <li>Red Sauce Pasta with Garlic Bread</li>
+            <li>White Sauce Pasta with Garlic Bread</li>
+        </ul>
+    </section>
+    <section>
+        <div class="section-header">Chinese Cuisine</div>
+        <ul type="circle">
+            <li>Veg Chowmein</li>
+            <li>Veg Fried Rice</li>
+            <li>Veg Chow Rice</li>
+            <li>Garlic Chowmein</li>
+            <li>Schezwan Rice</li>
+            <li>Hakka Noodles</li>
+            <li>Paneer Fried Rice</li>
+            <li>Mushroom Noodles</li>
+            <li>Paneer Baby Corn Rice</li>
+            <li>American Chop Suey</li>
+            <li>Mushroom Noodles</li>
+            <li>Veg Baby Corn Noodles</li>
+            <li>Veg Paneer Noodles</li>
+            <li>Chilly Garlic Noodles</li>
+        </ul>
+    </section>
+    <section>
+        <div class="section-header">Paneer Special</div>
+        <ul type="circle">
+            <li>Shahi Paneer</li>
+            <li>Paneer Maharaja</li>
+            <li>Palak Paneer</li>
+            <li>Paneer Butter Masala</li>
+            <li>Paneer Mushroom Baby Corn</li>
+            <li>Kadai Paneer</li>
+            <li>Khoya Paneer</li>
+            <li>Paneer Kali Mirch</li>
+            <li>Paneer Do Pyaza</li>
+            <li>Paneer Nazakat</li>
+            <li>Handi Paneer</li>
+        </ul>
+    </section>
+    <section>
+        <div class="section-header">Indian Bread</div>
+        <ul type="center">
+            <li>Plain Roti</li>
+            <li>Butter Roti</li>
+            <li>Plain Naan</li>
+            <li>Butter Naan</li>
+            <li>Missi Roti</li>
+            <li>Laccha Paratha</li>
+            <li>Pudina Paratha</li>
+            <li>Stuffed Paratha</li>
+            <li>Mirchi Paratha</li>
+            <li>Khasta Roti</li>
+            <li>Kashmiri Naan</li>
+            <li>Garlic Naan</li>
+            <li>Paneer Paratha</li>
+            <li>Aloo Paratha</li>
+            <li>Onion Paratha</li>
+        </ul>
+    </section>
+</div>
+<footer>
+    <p>&copy; 2024 Siddhant Restaurant</p>
+</footer>
+</body>
+</html>
