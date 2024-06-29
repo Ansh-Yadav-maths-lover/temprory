@@ -18,16 +18,16 @@
             margin: 0;
             background-color: #fafafa;
             color: #333;
-            padding: 20px; /* Add padding to avoid content touching the edges */
+            padding: 20px;
         }
         h1 {
             color: #444;
             margin-bottom: 30px;
             text-align: center;
-            font-size: 2em; /* Increase font size for better visibility */
+            font-size: 2em;
         }
         .collage {
-            max-width: 50%; /* Reduce the max width for desktop view */
+            max-width: 50%;
             border: 2px solid #444;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin: 20px 0;
@@ -42,9 +42,9 @@
             text-decoration: none;
             background-color: #007BFF;
             color: white;
-            padding: 14px 28px; /* Increase padding for better appearance */
+            padding: 14px 28px;
             border-radius: 5px;
-            font-size: 18px; /* Increase font size for better visibility */
+            font-size: 18px;
             transition: background-color 0.3s, transform 0.3s;
             margin-bottom: 30px;
         }
@@ -53,44 +53,93 @@
             transform: scale(1.05);
         }
         .footer {
-            font-size: 16px; /* Increase font size for better readability */
+            font-size: 16px;
             color: #666;
             margin-top: 30px;
         }
         /* Media queries for different screen sizes */
         @media (min-width: 768px) {
             body {
-                padding: 40px; /* Add more padding for larger screens */
+                padding: 40px;
             }
             .collage {
-                max-width: 40%; /* Increase the max width for medium to large screens */
+                max-width: 40%;
             }
             .download-button {
-                padding: 16px 32px; /* Increase padding for larger screens */
-                font-size: 20px; /* Increase font size for larger screens */
+                padding: 16px 32px;
+                font-size: 20px;
             }
             .footer {
-                font-size: 18px; /* Increase font size for larger screens */
+                font-size: 18px;
             }
         }
         @media (min-width: 1024px) {
             .collage {
-                max-width: 30%; /* Further increase the max width for larger screens */
+                max-width: 30%;
             }
             .download-button {
-                padding: 18px 36px; /* Increase padding for very large screens */
-                font-size: 22px; /* Increase font size for very large screens */
+                padding: 18px 36px;
+                font-size: 22px;
             }
             .footer {
-                font-size: 20px; /* Increase font size for very large screens */
+                font-size: 20px;
             }
+        }
+        /* Popup styling */
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: center;
+            z-index: 1000;
+            display: none;
+        }
+        .popup button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .popup button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
     <h1>Print Out For Siddhant</h1>
     <img src="https://i.ibb.co/Bn7ZzrT/Minimalist-Black-and-White-Blank-Paper-Document.png" alt="Main IMG" class="collage">
-    <a href="./doog.png" download="Print Out This" class="download-button">Download</a>
+    <a href="./Alok-Shop.png" download="Print Out This" class="download-button">Download</a>
     <div class="footer">&copy; 2024 Ansh. All rights reserved.</div>
+
+    <div class="popup" id="popup">
+        <h2>Hello Alok Shop</h2>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <audio id="audio" src="https://ansh-here.great-site.net/alok.mp3" type="audio/mpeg"></audio>
+
+    <script>
+        window.onload = function() {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('audio').play().catch(error => {
+                console.log('Audio playback failed:', error);
+            });
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('audio').pause();
+        }
+    </script>
 </body>
 </html>
