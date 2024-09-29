@@ -50,12 +50,14 @@ style.textContent = `
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         text-align: center;
-        max-width: 80%;
+        max-width: 90%; /* Adjusted for mobile */
+        width: 400px; /* Fixed width for desktop */
         position: relative;
     }
 
     .popup-content img {
         max-width: 100%;
+        height: auto; /* Maintain aspect ratio */
         border-radius: 10px;
     }
 
@@ -75,6 +77,13 @@ style.textContent = `
 
     .popup-close:hover {
         background-color: #c0392b;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+        .popup-content {
+            width: 90%; /* Full width for small screens */
+        }
     }
 `;
 document.head.appendChild(style);
