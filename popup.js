@@ -12,7 +12,7 @@ popupClose.className = 'popup-close';
 
 // Set inner content
 popupClose.innerHTML = '&times;';
-popupContent.innerHTML = '<img src="https://i.ibb.co/72h8f64/Say.gif" alt="Popup Image">';
+popupContent.innerHTML = '<img src="https://i.ibb.co/Yykt2p4/Your.gif" alt="Popup Image">';
 
 // Append elements
 popupContent.appendChild(popupClose);
