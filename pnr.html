@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PNR Status Extractor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        pre {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card p-4">
+                    <h1 class="text-center mb-4">PNR Status Extractor</h1>
+                    <form id="pnrForm">
+                        <div class="mb-3">
+                            <label for="pnrNumber" class="form-label">Enter Your PNR Number</label>
+                            <input type="text" id="pnrNumber" class="form-control" placeholder="Enter 10-digit PNR number" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Fetch PNR Status</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="result" class="row justify-content-center mt-4" style="display:none;">
+            <div class="col-md-8">
+                <div class="card p-4">
+                    <h3 class="mb-3">PNR Status Result:</h3>
+                    <div id="output"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('pnrForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const pnrNumber = document.getElementById('pnrNumber').value.trim();
+            if (!/^[0-9]{10}$/.test(pnrNumber)) {
+                alert('Please enter a valid 10-digit PNR number.');
+                return;
+            }
+
+            document.getElementById('result').style.display = 'none';
+            document.getElementById('output').innerHTML = '';
+
+            try {
+                // Fetch the RailYatri page for the PNR
+                const response = await fetch(`https://www.railyatri.in/m/pnr-status/${pnrNumber}`);
+                if (!response.ok) {
+                    throw new Error('Failed to fetch PNR status page.');
+                }
+
+                const pageHtml = await response.text();
+
+                // Extract JSON from the <script> tag with id="__NEXT_DATA__"
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(pageHtml, 'text/html');
+                const scriptTag = doc.querySelector('#__NEXT_DATA__');
+                if (!scriptTag) {
+                    throw new Error('Failed to locate PNR data on the page.');
+                }
+
+                const jsonData = JSON.parse(scriptTag.textContent);
+                const fullPnrDetail = jsonData.props.pageProps;
+
+                // Beautify output with a styled table
+                let outputHtml = '<table class="table table-bordered">';
+                for (const [key, value] of Object.entries(fullPnrDetail)) {
+                    outputHtml += `
+                        <tr>
+                            <th>${key}</th>
+                            <td>${typeof value === 'object' ? JSON.stringify(value, null, 2) : value}</td>
+                        </tr>`;
+                }
+                outputHtml += '</table>';
+
+                document.getElementById('result').style.display = 'block';
+                document.getElementById('output').innerHTML = outputHtml;
+            } catch (error) {
+                alert(error.message);
+            }
+        });
+    </script>
+</body>
+</html>
+ 
